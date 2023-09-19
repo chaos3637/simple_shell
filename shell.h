@@ -9,9 +9,10 @@
 #include <sys/stat.h>
 #include <errno.h>
 #include <fcntl.h>
+#include <string.h>
+#include <errno.h>
 
-
-
+char *read_line(void);
 
 
 #endif
