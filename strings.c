@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * _strcat - Concatenates two strings
@@ -9,20 +9,20 @@
  */
 char *_strcat(char *dest, const char *src)
 {
-	int i = 0, j;
+	int f = 0, r;
 
-	while  (dest[i] != '\0')
+	while  (dest[f] != '\0')
 	{
-		i++;
+		f++;
 	}
 
-	for (j = 0; src[j] != '\0'; j++)
+	for (r = 0; src[r] != '\0'; r++)
 	{
-		dest[i] = src[j];
-		i++;
+		dest[f] = src[r];
+		f++;
 	}
 
-	dest[i] = src[j];
+	dest[f] = src[r];
 
 	return (dest);
 }
@@ -36,9 +36,9 @@ char *_strcat(char *dest, const char *src)
  */
 int _strlen(const char *s)
 {
-	int len = 0, i;
+	int len = 0, f;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (f = 0; s[f] != '\0'; f++)
 	{
 		len++;
 	}
@@ -57,13 +57,13 @@ int _strlen(const char *s)
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i;
+	int f;
 
-	for (i = 0; src[i] != '\0'; i++)
+	for (f = 0; src[f] != '\0'; f++)
 	{
-		dest[i] = src[i];
+		dest[f] = src[f];
 	}
-	dest[i] = '\0';
+	dest[f] = '\0';
 
 	return (dest);
 }
@@ -77,16 +77,16 @@ char *_strcpy(char *dest, char *src)
 char *_strdup(char *str)
 {
 	char *s;
-	int i;
+	int f;
 
 	if (str == NULL)
 		return (NULL);
 	s = (char *) malloc((_strlen(str) + 1) * sizeof(char));
 	if (s == NULL)
 		return (NULL);
-	for (i = 0; str[i] != '\0'; i++)
-		s[i] = str[i];
-	s[i] = '\0';
+	for (f = 0; str[f] != '\0'; f++)
+		s[f] = str[f];
+	s[f] = '\0';
 	return (s);
 }
 
@@ -103,19 +103,19 @@ char *_strdup(char *str)
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i;
+	int f;
 
-	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
+	for (f = 0; s1[f] != '\0' && s2[f] != '\0'; f++)
 	{
-		if (s1[i] != s2[i])
+		if (s1[f] != s2[f])
 		{
-			return (s1[i] - s2[i]);
+			return (s1[f] - s2[f]);
 		}
 	}
 
-	if (s1[i] != s2[i])
+	if (s1[f] != s2[f])
 	{
-		return (s1[i] - s2[i]);
+		return (s1[f] - s2[f]);
 	}
 	return (0);
 }
