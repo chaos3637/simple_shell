@@ -11,7 +11,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <errno.h>
-
+#define DELIMT " \t\n"
 char *read_line(void);
 int _strcmp(char *s1, char *s2);
 char *_strdup(char *str);

@@ -10,7 +10,7 @@
 int main(int ac, char **av)
 {
 	char *line =  NULL, **command = NULL;
-	int status = 0;
+	int statut = 0;
 	(void) ac;
 	(void) av;
 
@@ -23,8 +23,6 @@ int main(int ac, char **av)
 				write(STDOUT_FILENO, "\n", 1);
 			return (status);
 		}
-
-		free(line);		
 		command = tokenizer(line);
 
 		/*status = _execute(command, av);*/
