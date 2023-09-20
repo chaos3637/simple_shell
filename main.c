@@ -20,7 +20,8 @@ int main(int ac, char **av)
 		line = read_line();
 		if (line == NULL)/* reache EOF ctr + D */
 			return (status);
-		printf("%s", line);		
+		printf("%s", line);
+		free(line);		
 		/*command = tokenizer(line);
 
 		status = _execute(command, av);*/
