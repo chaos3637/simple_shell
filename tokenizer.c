@@ -4,7 +4,6 @@ char **tokenizer(char *line)
 	char **token = NULL, *tmp = NULL;
 	char **command = NULL;
 	int compt = 0, f = 0;
-	
 	if (!line)
 		return (NULL);
 	tmp = _strdup(line);
@@ -17,7 +16,7 @@ char **tokenizer(char *line)
 	free(tmp), tmp = NULL;
 
 	command = malloc(sizeof(char *) * (cpt + 1));
-	if(!command)
+	if (!command)
 	{
 		free(line);
 		return (NULL);
@@ -32,5 +31,5 @@ char **tokenizer(char *line)
 	}
 	free(line), line = NULL;
 	command[f] = NULL;
-	return(command);
+	return (command);
 }
